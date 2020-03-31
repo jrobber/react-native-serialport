@@ -12,6 +12,13 @@
 4. [Methods](https://github.com/melihyarikkaya/react-native-serialport/wiki/Methods)  
 5. [Error Descriptions](https://github.com/melihyarikkaya/react-native-serialport/wiki/Error-Descriptions)  
 
+### Add the following android intent to `AndroidManifest.xml` so that permissions are remembered on android (not tested on iOS)
+```
+<intent-filter>
+   <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+</intent-filter>
+```
+
 ### Use to write data to port
 ```javascript
  RNSerialport.writeString("HELLO");
